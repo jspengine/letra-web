@@ -1,0 +1,9 @@
+{
+  "name": "lancamento-letra",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "cd landing && npm ci && npm run build",
+    "dev": "cd landing && npm run dev"
+  }
+}

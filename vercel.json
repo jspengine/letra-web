@@ -1,0 +1,14 @@
+{
+  "framework": "vite",
+  "buildCommand": "cd landing && npm ci && npm run build",
+  "outputDirectory": "landing/dist",
+  "installCommand": "cd landing && npm ci",
+  "rewrites": [
+    { "source": "/brand", "destination": "/brand/index.html" },
+    { "source": "/brand/*", "destination": "/brand/index.html" },
+    { "source": "/docs", "destination": "/docs/index.html" },
+    { "source": "/docs/*", "destination": "/docs/index.html" },
+    { "source": "/blog", "destination": "/blog/index.html" },
+    { "source": "/blog/*", "destination": "/blog/index.html" }
+  ]
+}

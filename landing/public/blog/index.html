@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Announcing Letra — Da intenção à entrega</title>
+<link rel="icon" href="/brand/logos/svg/favicon.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--letra-amber-500:#ffb800;--letra-slate-900:#0f1115;--letra-slate-800:#171a21;--letra-slate-700:#232833;--letra-slate-500:#6b7280;--letra-white-soft:#f8fafc;--brand-primary:var(--letra-amber-500);--brand-background:var(--letra-slate-900);--brand-surface:var(--letra-slate-800);--brand-border:color-mix(in srgb,var(--letra-slate-500)28%,transparent);--brand-text:var(--letra-white-soft);--brand-text-muted:#a1a7b3;--font-brand:"Sora","Inter",system-ui,sans-serif;--font-ui:"Inter",system-ui,sans-serif;--font-mono:"JetBrains Mono","SFMono-Regular",Consolas,monospace;--radius-md:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{color-scheme:dark}
+body{background:var(--brand-background);color:var(--brand-text);font-family:var(--font-ui);line-height:1.7;max-width:720px;margin:0 auto;padding:60px 24px}
+h1{font-family:var(--font-brand);font-size:40px;font-weight:700;margin-bottom:16px;line-height:1.2}
+.meta{color:var(--brand-text-muted);font-size:14px;margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid var(--brand-border)}
+h2{font-family:var(--font-brand);font-size:24px;font-weight:600;margin:40px 0 16px}
+p{color:var(--brand-text-muted);font-size:16px;margin-bottom:16px}
+p strong{color:var(--brand-text)}
+.cta{display:inline-flex;padding:12px 28px;background:var(--brand-primary);color:var(--letra-slate-900);border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;margin:24px 0}
+.cta:hover{opacity:.9}
+.quote{border-left:2px solid var(--brand-primary);padding:16px 24px;margin:24px 0;background:rgba(255,184,0,.04);border-radius:0 12px 12px 0}
+.quote p{font-style:italic;font-size:15px;margin:0}
+code{font-family:var(--font-mono);font-size:14px;background:rgba(0,0,0,.4);padding:2px 6px;border-radius:4px}
+@media(max-width:480px){body{padding:32px 16px}h1{font-size:28px}}
+</style>
+</head>
+<body>
+<p style="font-family:var(--font-brand);font-size:14px;text-transform:uppercase;letter-spacing:.1em;color:var(--brand-primary);margin-bottom:24px">Product Launch · July 2026</p>
+<h1>Announcing Letra: Mission Control for AI-Assisted Engineering</h1>
+<p class="meta">By the Letra team · July 3, 2026 · 5 min read</p>
+
+<p><strong>TL;DR:</strong> Letra is a local control plane for AI-assisted software delivery. It connects human intent to agent execution with coordination, supervision, and verifiable evidence at every step. <a href="#waitlist" style="color:var(--brand-primary)">Join the waitlist →</a></p>
+
+<h2>The Problem: Agents Without a Map</h2>
+<p>AI code assistants are incredible. They generate code, debug issues, write tests. But there's a catch: each agent works in isolation. There's no shared context, no coordinated handoff, no human supervision at critical points. The result is speed without direction.</p>
+<p>Teams using AI tools face three challenges:</p>
+<p><strong>1. Context fragmentation.</strong> Each agent starts from scratch. What one agent learns, the next doesn't know.</p>
+<p><strong>2. No supervision.</strong> Code goes from generation to production without human review at the right moments.</p>
+<p><strong>3. Black box delivery.</strong> When something breaks, there's no trace of which agent did what, when, or why.</p>
+
+<h2>The Solution: Orchestration, Not Automation</h2>
+<p>Letra is not another AI code generator. It's a <strong>coordination layer</strong> that sits between you and your AI agents, managing context, enforcing gates, and recording every decision.</p>
+<p>The core insight: AI agents are tools. Tools need operators. Operators need dashboards, controls, and feedback loops. That's what Letra provides.</p>
+
+<div class="quote"><p>"Letra exists to transform human intent into working software with operational precision."</p></div>
+
+<h2>How It Works</h2>
+<p>Letra organizes work through <strong>workspaces</strong>. Each workspace holds specs, flows, agents, and evidence. Work progresses through stages — <code>backlog → design → code → review → done</code> — with <strong>gates</strong> at each transition requiring human approval.</p>
+<p>Behind the scenes, <strong>agents</strong> (LLMs with configured personas) execute the work. Their output is always presented for human approval before any side effect.</p>
+
+<h2>What's Coming in v1</h2>
+<p><strong>Workspace model:</strong> Self-contained units with full context, rules, and state. <strong>Flow engine:</strong> Move work through lifecycle stages with gates. <strong>3 agent personas:</strong> reviewer, security, analyst — each with explicit constraints. <strong>Full traceability:</strong> Every action produces an artifact. No black boxes. <strong>CLI + Web UI:</strong> Terminal-first with a companion SPA.</p>
+
+<h2>Join the Journey</h2>
+<p>Letra is in early access. We're building in public, iterating with real teams, and shipping weekly.</p>
+<a href="#waitlist" class="cta">Join the waitlist →</a>
+<p style="margin-top:24px">Follow us on <a href="#" style="color:var(--brand-primary)">Twitter</a> · <a href="#" style="color:var(--brand-primary)">GitHub</a> · <a href="#" style="color:var(--brand-primary)">LinkedIn</a></p>
+</body>
+</html>

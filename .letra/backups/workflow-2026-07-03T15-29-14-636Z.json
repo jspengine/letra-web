@@ -1,0 +1,121 @@
+{
+  "version": "1.0",
+  "name": "Lançamento do LETRA",
+  "createdAt": "2026-07-03T13:01:36.708Z",
+  "updatedAt": "2026-07-03T15:29:06.078Z",
+  "stages": [
+    {
+      "id": "backlog",
+      "name": "Backlog",
+      "zone": "todo",
+      "order": 0
+    },
+    {
+      "id": "design",
+      "name": "Design",
+      "zone": "doing",
+      "order": 1
+    },
+    {
+      "id": "code",
+      "name": "Code",
+      "zone": "doing",
+      "order": 2
+    },
+    {
+      "id": "review",
+      "name": "Review",
+      "zone": "doing",
+      "order": 3
+    },
+    {
+      "id": "done",
+      "name": "Done",
+      "zone": "done",
+      "order": 4
+    }
+  ],
+  "items": [
+    {
+      "id": "ITEM-1",
+      "description": "Landing Page / Website público",
+      "stage": "done",
+      "createdAt": "2026-07-03T13:17:57.092Z",
+      "spec": "landing-page"
+    },
+    {
+      "id": "ITEM-2",
+      "description": "Brand Site & Design System público",
+      "stage": "done",
+      "createdAt": "2026-07-03T13:18:04.113Z",
+      "spec": "brand-site"
+    },
+    {
+      "id": "ITEM-3",
+      "description": "Documentação técnica / Dev Docs",
+      "stage": "done",
+      "createdAt": "2026-07-03T13:18:11.171Z",
+      "spec": "dev-docs"
+    },
+    {
+      "id": "ITEM-4",
+      "description": "Campanha de lançamento",
+      "stage": "done",
+      "createdAt": "2026-07-03T13:18:47.762Z",
+      "spec": "launch-campaign"
+    },
+    {
+      "id": "ITEM-5",
+      "description": "Waitlist / Community setup",
+      "stage": "done",
+      "createdAt": "2026-07-03T13:18:56.265Z",
+      "spec": "waitlist-community"
+    },
+    {
+      "id": "ITEM-6",
+      "description": "Analytics & Launch metrics",
+      "stage": "backlog",
+      "createdAt": "2026-07-03T13:19:15.886Z",
+      "spec": "analytics-launch"
+    }
+  ],
+  "tools": [
+    "opencode",
+    "hermes"
+  ],
+  "template": "padrao",
+  "harnessVersion": "v0.1.0",
+  "targets": [
+    {
+      "id": "target-g1lp36",
+      "path": "C:/Workspace/lancamento-letra",
+      "projectType": "software",
+      "adapters": [
+        "opencode",
+        "hermes"
+      ],
+      "buildCommand": null,
+      "testCommand": null
+    }
+  ],
+  "specLinks": {
+    "landing-page": {
+      "path": ".letra/specs/landing-page/spec.md"
+    },
+    "brand-site": {
+      "path": ".letra/specs/brand-site/spec.md"
+    },
+    "dev-docs": {
+      "path": ".letra/specs/dev-docs/spec.md"
+    },
+    "launch-campaign": {
+      "path": ".letra/specs/launch-campaign/spec.md"
+    },
+    "waitlist-community": {
+      "path": ".letra/specs/waitlist-community/spec.md"
+    },
+    "analytics-launch": {
+      "path": ".letra/specs/analytics-launch/spec.md"
+    }
+  }
+}

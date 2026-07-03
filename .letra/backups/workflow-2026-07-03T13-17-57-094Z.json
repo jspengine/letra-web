@@ -1,0 +1,58 @@
+{
+  "version": "1.0",
+  "name": "Lançamento do LETRA",
+  "createdAt": "2026-07-03T13:01:36.708Z",
+  "updatedAt": "2026-07-03T13:01:36.708Z",
+  "stages": [
+    {
+      "id": "backlog",
+      "name": "Backlog",
+      "zone": "todo",
+      "order": 0
+    },
+    {
+      "id": "design",
+      "name": "Design",
+      "zone": "doing",
+      "order": 1
+    },
+    {
+      "id": "code",
+      "name": "Code",
+      "zone": "doing",
+      "order": 2
+    },
+    {
+      "id": "review",
+      "name": "Review",
+      "zone": "doing",
+      "order": 3
+    },
+    {
+      "id": "done",
+      "name": "Done",
+      "zone": "done",
+      "order": 4
+    }
+  ],
+  "items": [],
+  "tools": [
+    "opencode",
+    "hermes"
+  ],
+  "template": "padrao",
+  "harnessVersion": "v0.1.0",
+  "targets": [
+    {
+      "id": "target-g1lp36",
+      "path": "C:/Workspace/lancamento-letra",
+      "projectType": "software",
+      "adapters": [
+        "opencode",
+        "hermes"
+      ],
+      "buildCommand": null,
+      "testCommand": null
+    }
+  ]
+}

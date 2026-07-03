@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe — Landing Page Letra</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .wireframe {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .wireframe-header {
+            text-align: center;
+            padding: 40px 20px;
+            background: #e0e0e0;
+            border: 2px dashed #999;
+            margin-bottom: 40px;
+            border-radius: 8px;
+        }
+
+        .wireframe-header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .wireframe-header p {
+            color: #888;
+            font-size: 14px;
+        }
+
+        .section {
+            background: white;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-label {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: #ff9800;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-content h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .hero-content p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 15px;
+        }
+
+        .cta-button {
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-primary {
+            background: #ffb800;
+            color: #0f1115;
+        }
+
+        .cta-secondary {
+            background: #f5f5f5;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+
+        .hero-visual {
+            background: #f5f5f5;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+
+        /* Problem Section */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .problem-card {
+            background: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .problem-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .problem-card h4 {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .problem-card p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* Solution Section */
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .solution-card {
+            background: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .solution-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .solution-card h4 {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .solution-card p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* Demo Section */
+        .demo-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .demo-video {
+            background: #f5f5f5;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+
+        .demo-features h4 {
+            font-size: 14px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .demo-features ul {
+            list-style: none;
+        }
+
+        .demo-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* Waitlist Section */
+        .waitlist-container {
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .waitlist-container h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .waitlist-container p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .waitlist-form {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .waitlist-input {
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            width: 300px;
+        }
+
+        .waitlist-button {
+            padding: 12px 24px;
+            background: #ffb800;
+            color: #0f1115;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        .footer {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .footer-column h5 {
+            font-size: 13px;
+            margin-bottom: 15px;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 8px;
+        }
+
+        .footer-column a {
+            color: #666;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 12px;
+        }
+
+        /* Flow Visual */
+        .flow-visual {
+            text-align: center;
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 24px;
+            letter-spacing: 8px;
+            color: #666;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero,
+            .demo-container {
+                grid-template-columns: 1fr;
+            }
+
+            .problem-grid,
+            .solution-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .waitlist-form {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .waitlist-input {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wireframe">
+        <div class="wireframe-header">
+            <h1>Wireframe — Landing Page Letra</h1>
+            <p>Baixa fidelidade · Foco em estrutura e layout · Não é design final</p>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="section">
+            <span class="section-label">AC-1: Hero Section</span>
+            <h2 class="section-title">Hero Section</h2>
+            <div class="hero">
+                <div class="hero-content">
+                    <h2>Da intenção à entrega</h2>
+                    <p>Mission Control para engenharia assistida por IA. Orquestre agentes, supervise entregas, mantenha controle.</p>
+                    <div class="hero-cta">
+                        <a href="#waitlist" class="cta-button cta-primary">Join waitlist</a>
+                        <a href="#demo" class="cta-button cta-secondary">Ver demo</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    [Demo/Preview do Produto]
+                </div>
+            </div>
+            <div class="flow-visual">●──●──●──◆</div>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="section">
+            <span class="section-label">AC-2: Problema</span>
+            <h2 class="section-title">O Problema</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">🎯</div>
+                    <h4>Agentes sem supervisão</h4>
+                    <p>IA gera código sem contexto, sem aprovação, sem rastro. Você descobre problemas depois.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🔗</div>
+                    <h4>Handoffs quebrados</h4>
+                    <p>Cada agente trabalha isolado. Não há coordenação entre etapas do desenvolvimento.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">👁️</div>
+                    <h4>Falta de visibilidade</h4>
+                    <p>Não sabe o que está acontecendo, quem está fazendo, nem quando vai terminar.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section class="section">
+            <span class="section-label">AC-3: Solução</span>
+            <h2 class="section-title">A Solução</h2>
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">🎮</div>
+                    <h4>Orquestração de agentes</h4>
+                    <p>Conecte múltiplos agentes em fluxos coordenados com gates de aprovação humana.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">📊</div>
+                    <h4>Supervisão em tempo real</h4>
+                    <p>Veja o que cada agente está fazendo, quando precisa da sua decisão, e o que foi entregue.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">✅</div>
+                    <h4>Entrega verificável</h4>
+                    <p>Cada etapa tem evidência. Cada decisão tem registro. Cada entrega tem validação.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demo Section -->
+        <section class="section" id="demo">
+            <span class="section-label">AC-5: Demo</span>
+            <h2 class="section-title">Veja em ação</h2>
+            <div class="demo-container">
+                <div class="demo-video">
+                    [Video Demo 60s]
+                </div>
+                <div class="demo-features">
+                    <h4>O que você vai ver:</h4>
+                    <ul>
+                        <li>Criação de workspace em 30 segundos</li>
+                        <li>Definição de flow com gates</li>
+                        <li>Execução de agentes com supervisão</li>
+                        <li>Aprovação humana em tempo real</li>
+                        <li>Entrega com evidências</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Waitlist Section -->
+        <section class="section" id="waitlist">
+            <span class="section-label">AC-6: Waitlist</span>
+            <h2 class="section-title">Entre na lista</h2>
+            <div class="waitlist-container">
+                <h3>Seja um dos primeiros a usar o Letra</h3>
+                <p>Early access limitado. Cadastre-se e receba convite quando estiver pronto.</p>
+                <form class="waitlist-form">
+                    <input type="email" class="waitlist-input" placeholder="seu@email.com" required>
+                    <button type="submit" class="waitlist-button">Join waitlist</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="section">
+            <span class="section-label">AC-7: Footer</span>
+            <h2 class="section-title">Footer</h2>
+            <div class="footer">
+                <div class="footer-column">
+                    <h5>Produto</h5>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Roadmap</a></li>
+                        <li><a href="#">Changelog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Recursos</h5>
+                    <ul>
+                        <li><a href="#">Documentação</a></li>
+                        <li><a href="#">Brand Guidelines</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Comunidade</h5>
+                    <ul>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Letra. Da intenção à entrega.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
