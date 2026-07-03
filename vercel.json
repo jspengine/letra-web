@@ -1,7 +1,8 @@
 {
   "framework": "vite",
-  "rootDirectory": "landing/",
-  "outputDirectory": "dist",
+  "installCommand": "npm --prefix landing ci",
+  "buildCommand": "npm --prefix landing run build",
+  "outputDirectory": "landing/dist",
   "rewrites": [
     { "source": "/brand/:path*", "destination": "/brand/index.html" },
     { "source": "/docs/:path*", "destination": "/docs/index.html" },
