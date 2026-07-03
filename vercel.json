@@ -4,11 +4,8 @@
   "outputDirectory": "landing/dist",
   "installCommand": "cd landing && npm ci",
   "rewrites": [
-    { "source": "/brand", "destination": "/brand/index.html" },
-    { "source": "/brand/*", "destination": "/brand/index.html" },
-    { "source": "/docs", "destination": "/docs/index.html" },
-    { "source": "/docs/*", "destination": "/docs/index.html" },
-    { "source": "/blog", "destination": "/blog/index.html" },
-    { "source": "/blog/*", "destination": "/blog/index.html" }
+    { "source": "/brand/:path*", "destination": "/brand/index.html" },
+    { "source": "/docs/:path*", "destination": "/docs/index.html" },
+    { "source": "/blog/:path*", "destination": "/blog/index.html" }
   ]
 }
